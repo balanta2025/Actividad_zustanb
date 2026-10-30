@@ -196,13 +196,7 @@ La lista del PDF evalúa el **producto de transferencia**. Se indica también el
 
 ## 11. Estado de Git
 
-La práctica quedó en un repositorio local con rama `main` y tres commits descriptivos:
-
-```text
-954887a docs: agrega plan, evidencias, analisis e informe del taller
-5e22dcb feat: implementa contador, tienda, carrito, favoritos, tema y filtros con Zustand
-cf55afc chore: configura Tienda SENA con React 19, Vite y Zustand
-```
+La práctica quedó en un repositorio local con rama `main` y commits descriptivos agrupados por configuración, implementación y documentación. Los hashes se pueden consultar con `git log --oneline`.
 
 No se hizo push, no se creó un Pull Request y no se modificó ningún repositorio del grupo. La rama `feature/zustand` y el PR corresponden a la Parte B y quedan pendientes de autorización sobre el repositorio real.
 
