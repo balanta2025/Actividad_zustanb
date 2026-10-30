@@ -194,6 +194,18 @@ La lista del PDF evalúa el **producto de transferencia**. Se indica también el
 8. Abrir Redux DevTools y explicar `cart/addItem`, `cart/updateQty`, `cart/removeItem` y `cart/clear`.
 9. Explicar por qué no se inventó la autenticación de la Parte B y qué información falta.
 
-## 11. Conclusión
+## 11. Estado de Git
+
+La práctica quedó en un repositorio local con rama `main` y tres commits descriptivos:
+
+```text
+954887a docs: agrega plan, evidencias, analisis e informe del taller
+5e22dcb feat: implementa contador, tienda, carrito, favoritos, tema y filtros con Zustand
+cf55afc chore: configura Tienda SENA con React 19, Vite y Zustand
+```
+
+No se hizo push, no se creó un Pull Request y no se modificó ningún repositorio del grupo. La rama `feature/zustand` y el PR corresponden a la Parte B y quedan pendientes de autorización sobre el repositorio real.
+
+## 12. Conclusión
 
 La práctica individual cumple los ejercicios 1 a 5 y deja preparado el ejercicio 6. El código es funcional, verificable y está documentado. La transferencia al proyecto formativo no se puede declarar terminada sin el repositorio React y los endpoints reales; declararla completada con datos simulados sería incorrecto.
