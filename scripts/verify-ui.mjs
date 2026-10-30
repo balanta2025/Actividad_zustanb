@@ -221,6 +221,51 @@ try {
   )
   check('Limpiar filtros restaura los 20 productos', true)
 
+  await page.setRequestInterception(true)
+
+  const blockApi = (request) => {
+    if (request.url().includes('fakestoreapi.com')) request.abort()
+    else request.continue()
+  }
+
+  page.on('request', blockApi)
+  await page.reload({ waitUntil: 'domcontentloaded' })
+  await page.waitForSelector('.alert-info', { timeout: 15000 })
+
+  const localNotice = await page.$eval('.alert-info', (alert) => alert.textContent)
+  const localProducts = await page.$$eval('.product-card', (cards) => cards.length)
+  check('La app avisa cuando usa el respaldo local', localNotice.includes('catálogo local'))
+  check('El respaldo local carga los productos', localProducts === 20, `${localProducts} productos`)
+
+  page.off('request', blockApi)
+
+  const blockAll = (request) => {
+    if (
+      request.url().includes('fakestoreapi.com') ||
+      request.url().includes('/products.json')
+    ) {
+      request.abort()
+    } else {
+      request.continue()
+    }
+  }
+
+  page.on('request', blockAll)
+  await page.reload({ waitUntil: 'domcontentloaded' })
+  await page.waitForSelector('.alert-error', { timeout: 15000 })
+
+  const errorText = await page.$eval('.alert-error', (alert) => alert.textContent)
+  check('Se muestra el error y el botón de reintento', errorText.includes('Reintentar'))
+
+  page.off('request', blockAll)
+  await page.setRequestInterception(false)
+  await page.click('.alert-error .btn-secondary')
+  await page.waitForFunction(
+    () => document.querySelectorAll('.product-card').length === 20,
+    { timeout: 30000 },
+  )
+  check('El reintento recupera el catálogo de la API', true)
+
   check('Sin errores de ejecución en la página', pageErrors.length === 0, pageErrors.join(' | '))
 
   console.log('')
