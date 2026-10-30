@@ -6,7 +6,7 @@
 
 ## 1. Resumen ejecutivo
 
-La práctica individual **Tienda SENA** quedó implementada y verificada: contador compartido, catálogo desde Fake Store API, carrito con panel de control, favoritos, tema claro/oscuro, filtros compartidos, persistencia y conexión del carrito a Redux DevTools. El build y el lint pasan, y 22 comprobaciones automatizadas de interfaz y persistencia terminaron correctamente.
+La práctica individual **Tienda SENA** quedó implementada y verificada: contador compartido, catálogo desde Fake Store API, carrito con panel de control, favoritos, tema claro/oscuro, filtros compartidos, persistencia y conexión del carrito a Redux DevTools. El build y el lint pasan, y 26 comprobaciones automatizadas de interfaz y persistencia terminaron correctamente.
 
 La **Parte B (transferencia al proyecto formativo)** no se pudo ejecutar: en el equipo no existe un frontend React de ProyecTwin conectado a un backend real. La aplicación Angular disponible usa usuarios simulados y `sessionStorage`; el backend Laravel solo tiene la instalación base con `GET /api/user`; la vista React existente es una sola pantalla estática sin rutas ni API. Para no inventar endpoints ni una autenticación paralela, la transferencia se documentó como bloqueada.
 
@@ -95,7 +95,7 @@ Resultado: compilación exitosa.
 
 ### `npm run test:e2e`
 
-Se ejecutaron 22 comprobaciones con `puppeteer-core` y el Chrome instalado:
+Se ejecutaron 26 comprobaciones con `puppeteer-core` y el Chrome instalado:
 
 ```text
 OK  Catálogo con los 20 productos de la API — 20 tarjetas
@@ -119,6 +119,10 @@ OK  Los filtros de texto y categoría funcionan juntos — 1 resultados
 OK  El filtro combinado encuentra la mochila — 1 resultado
 OK  La búsqueda sin coincidencias muestra el estado vacío
 OK  Limpiar filtros restaura los 20 productos
+OK  La app avisa cuando usa el respaldo local
+OK  El respaldo local carga los productos — 20 productos
+OK  Se muestra el error y el botón de reintento
+OK  El reintento recupera el catálogo de la API
 OK  Sin errores de ejecución en la página
 ```
 
@@ -177,7 +181,7 @@ La lista del PDF evalúa el **producto de transferencia**. Se indica también el
 | 6 | Selectores en los componentes | COMPLETADO en práctica / BLOQUEADO en producto | Selectores individuales y `useShallow` |
 | 7 | Actualizaciones inmutables | COMPLETADO en práctica / BLOQUEADO en producto | `map`, `filter` y spread |
 | 8 | Prop drilling eliminado | COMPLETADO en práctica / BLOQUEADO en producto | Navbar, tarjetas y filtros por stores |
-| 9 | Funcionalidades existentes siguen funcionando | COMPLETADO en práctica | 22 pruebas y build exitoso |
+| 9 | Funcionalidades existentes siguen funcionando | COMPLETADO en práctica | 26 pruebas y build exitoso |
 | 10 | Rama `feature/zustand`, commits y PR | PENDIENTE | Requiere el repositorio del grupo y revisión |
 | 11 | README con "Manejo de estado" | COMPLETADO en práctica / BLOQUEADO en producto | Documentado en `README.md` |
 | 12 | Sustentación clara de cada store | PENDIENTE | Guion preparado; falta exponer |

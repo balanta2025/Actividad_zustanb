@@ -58,7 +58,7 @@ La lista de chequeo del PDF evalúa el producto de transferencia (el proyecto de
 | 6 | Componentes leen con selectores | COMPLETADO en práctica / BLOQUEADO en producto | No se usa `useStore()` sin selector; `useShallow` en `FilterBar` |
 | 7 | Actualizaciones inmutables | COMPLETADO en práctica / BLOQUEADO en producto | `map`, `filter` y spread en los stores |
 | 8 | Prop drilling eliminado | COMPLETADO en práctica / BLOQUEADO en producto | Navbar, ProductCard y FilterBar se comunican por stores |
-| 9 | Funcionalidades existentes siguen funcionando | COMPLETADO en práctica | 22 comprobaciones automatizadas y build exitoso |
+| 9 | Funcionalidades existentes siguen funcionando | COMPLETADO en práctica | 26 comprobaciones automatizadas y build exitoso |
 | 10 | Rama `feature/zustand`, commits y PR revisado | PENDIENTE | Requiere el repositorio del grupo y revisión de otro integrante |
 | 11 | README con "Manejo de estado" completo | COMPLETADO en práctica / BLOQUEADO en producto | Documentado en el README de la práctica |
 | 12 | Sustentación clara de cada store | PENDIENTE | Se preparó el guion; falta la exposición ante el instructor |

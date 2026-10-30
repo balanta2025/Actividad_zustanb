@@ -20,7 +20,7 @@ npm run dev        # servidor de desarrollo
 npm run build      # compilación de producción
 npm run lint       # revisión con oxlint
 npm run preview    # vista previa del build
-npm run test:e2e   # 22 comprobaciones de interfaz y persistencia
+npm run test:e2e   # 26 comprobaciones de interfaz y persistencia
 ```
 
 `test:e2e` usa el Chrome o Edge instalado en el equipo; no descarga un navegador. Si el navegador está en otra ruta, se puede indicar con la variable `CHROME_PATH`.
@@ -181,7 +181,7 @@ Resultados de la última ejecución:
 
 - `npm run lint`: sin errores.
 - `npm run build`: compilación exitosa.
-- `npm run test:e2e`: 22 comprobaciones exitosas, incluyendo catálogo, carrito, persistencia, favoritos, tema y filtros.
+- `npm run test:e2e`: 26 comprobaciones exitosas, incluyendo catálogo, carrito, persistencia, favoritos, tema, filtros y respaldo local.
 - Navegador headless: la aplicación renderizó los 20 productos reales de Fake Store API sin errores de ejecución.
 
 Las capturas están en `docs/evidencias/`:
